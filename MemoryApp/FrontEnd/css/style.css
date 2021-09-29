@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+.buttonContainer {
+  text-align: center;
+}
+.buttonContainer button {
+  border: 1px solid #0066cc;
+  background-color: #0099cc;
+  color: #ffffff;
+  padding: 5px 10px;
+  text-align: center;
+  margin: 10px 0px 0px 0px;
+}
+.buttonContainer button:hover {
+  border: 1px solid #0099cc;
+  background-color: #00aacc;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+.buttonContainer button:disabled,
+.buttonContainer button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+.buttonContainer #loosemessage {
+  color: red;
+}
+
+.memory-game {
+  display: flex;
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+.memory-game .memory-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.memory-game .memory-card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+.memory-game .memory-card.flip {
+  transform: rotateY(180deg);
+}
+.memory-game .front-face,
+.memory-game .back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #1c7ccc;
+  backface-visibility: hidden;
+}
+.memory-game .front-face {
+  transform: rotateY(180deg);
+}
+
+#progress {
+  width: 90%;
+  height: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid blue;
+}
+
+#progress-bar {
+  height: 20px;
+  background-color: blue;
+  border-radius: 10px;
+}
+
+.time {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
